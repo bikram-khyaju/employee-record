@@ -19,12 +19,14 @@ public class EmployeeController {
 	public String index(){
 		return "index";
 	}
+	
+	
 /*	@RequestMapping(value="/addEmployee", method=RequestMethod.GET)
 	public String addEmployee(){
 		return "template/addEmployee";
 	}
 	@RequestMapping(value="/addEmployee", method=RequestMethod.POST)
-	public void addEmployee(@ModelAttribute("employee") Employee employee){
+	public String addEmployee(@ModelAttribute("employee") Employee employee){
 		employeeService.save(employee);
 		return "template/addEmployee";
 	}*/

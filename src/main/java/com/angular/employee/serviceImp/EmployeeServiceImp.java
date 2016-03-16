@@ -1,5 +1,7 @@
 package com.angular.employee.serviceImp;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Service;
@@ -16,6 +18,21 @@ public class EmployeeServiceImp implements EmployeeService {
 
 	public void save(Employee employee) {
 		employeeRepository.save(employee);
+		
+	}
+
+	public List<Employee> getAllEmployees() {
+		// TODO Auto-generated method stub
+		return employeeRepository.findAll();
+	}
+
+	public void deleteEmployee(Integer id) {
+		employeeRepository.delete(id);
+		
+	}
+
+	public Employee editEmployee(Integer id) {
+		return employeeRepository.findOne(id);
 		
 	}
 
